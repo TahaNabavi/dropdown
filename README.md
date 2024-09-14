@@ -1,6 +1,7 @@
 ## نحوه استفاده
 
 ![Alt text](https://s8.uupload.ir/files/1_zk3e.png)
+
 ```
 <SelectableDropdown
         items={[
@@ -28,9 +29,13 @@
       />
 ```
 
+
 نشان دادن آیتم انتخاب شده
 
+
 ![Alt text](https://s8.uupload.ir/files/2_im3k.png)
+
+
 ```
 <SelectableDropdown
   ...props
@@ -38,8 +43,13 @@
 />
 ```
 
+
 محل قرار گرفتن منو
+
+
 "top-left" و "top-right" و "top-middle" و "right" وم "left" و "bottom-left" و "bottom-right" و "bottom-middle"
+
+
 ```
 <SelectableDropdown
   ...props
@@ -47,8 +57,13 @@
 />
 ```
 
+
 لغو انتخاب آیتم
+
+
 ![Alt text](https://s8.uupload.ir/files/3_3jbi.png)
+
+
 ```
 <SelectableDropdown
   ...props
@@ -56,8 +71,13 @@
 />
 ```
 
+
 همچنین میتوانید value را به انتخاب خود یک (آبجکت یا آرایه) بدید و با استفاده از itemRenderer اون رو نشون بدید
+
+
 ![Alt text](https://s8.uupload.ir/files/4_wdf8.png)
+
+
 ```
 <SelectableDropdown
   ...props
@@ -93,11 +113,18 @@
   }}
 />
 ```
+
  
 همچنین میتوانید از سرچ استفاده کنید
+
+
 itemSearchShow = مقدار نشان دادن آیتم ها
+
 getItemString = یک فانکشن برای برگرداند یک استرینگ برای سرچ
+
 ![Alt text](https://s8.uupload.ir/files/5_28pn.png)
+
+
 ```
 <SelectableDropdown
   ...props
