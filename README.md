@@ -1,84 +1,104 @@
-## نحوه استفاده
+**Selectable Dropdown Component**
+=============================
+
+A customizable dropdown component built with Tailwind CSS.
+
+## Usage
+
+### Basic Example
+
 
 ![Alt text](https://s8.uupload.ir/files/1_zk3e.png)
 
-```
+
+```jsx
 <SelectableDropdown
-        items={[
-          {
-            value: "پایتون",
-            key: "py",
-          },
-          {
-            value: "جاوااسکریپت",
-            key: "js",
-          },
-          {
-            value: "تایپ اسکریپت",
-            key: "ts",
-          },
-          {
-            value: "پی اچ پی",
-            key: "php",
-          },
-        ]}
-        title={<>زبان های برنامه نویسی</>}
-        onChange={(e) => {
-          console.log(e);
-        }}
-      />
+  items={[
+    {
+      value: "پایتون",
+      key: "py",
+    },
+    {
+      value: "جاوااسکریپت",
+      key: "js",
+    },
+    {
+      value: "تایپ اسکریپت",
+      key: "ts",
+    },
+    {
+      value: "پی اچ پی",
+      key: "php",
+    },
+  ]}
+  title={<>زبان های برنامه نویسی</>}
+  onChange={(e) => {
+    console.log(e);
+  }}
+/>
 ```
 
-
-نشان دادن آیتم انتخاب شده
+### Showing Selected Item
 
 
 ![Alt text](https://s8.uupload.ir/files/2_im3k.png)
 
 
-```
+To show the selected item, pass `showItemSelected={true}` as a prop.
+
+```jsx
 <SelectableDropdown
   ...props
-  showItemSelecte={true}
+  showItemSelected={true}
 />
 ```
 
+### Placement Options
 
-محل قرار گرفتن منو
+You can customize the placement of the dropdown menu using the `placement` prop. Available options are:
 
+* "top-left"
+* "top-right"
+* "top-middle"
+* "right"
+* "left"
+* "bottom-left"
+* "bottom-right"
+* "bottom-middle"
 
-"top-left" و "top-right" و "top-middle" و "right" وم "left" و "bottom-left" و "bottom-right" و "bottom-middle"
-
-
-```
+```jsx
 <SelectableDropdown
   ...props
   placement="bottom-middle"
 />
 ```
 
-
-لغو انتخاب آیتم
+### Cancel Selection
 
 
 ![Alt text](https://s8.uupload.ir/files/3_3jbi.png)
 
 
-```
+To allow canceling the selection, pass `cancelSelect={true}` as a prop.
+
+```jsx
 <SelectableDropdown
   ...props
   cancelSelect={true}
 />
 ```
 
+### Custom Item Rendering
 
-همچنین میتوانید value را به انتخاب خود یک (آبجکت یا آرایه) بدید و با استفاده از itemRenderer اون رو نشون بدید
 
 
 ![Alt text](https://s8.uupload.ir/files/4_wdf8.png)
 
 
-```
+
+You can pass a custom `itemRenderer` function to render the items. This function receives the item value as an argument.
+
+```jsx
 <SelectableDropdown
   ...props
   items={[
@@ -114,22 +134,31 @@
 />
 ```
 
- 
-همچنین میتوانید از سرچ استفاده کنید
+### Search Functionality
 
-
-itemSearchShow = مقدار نشان دادن آیتم ها
-
-getItemString = یک فانکشن برای برگرداند یک استرینگ برای سرچ
 
 ![Alt text](https://s8.uupload.ir/files/5_28pn.png)
 
 
-```
+To enable search functionality, pass `itemSearch={true}` as a prop. You can also customize the number of items to show using `itemSearchShow`.
+
+```jsx
 <SelectableDropdown
   ...props
   itemSearch={true}
   itemSearchShow={2}
   getItemString={(e) => e}
+/>
+```
+
+### Styling
+
+You can customize the styles of the component using the `menuClassName` and `titleClassName` props.
+
+```jsx
+<SelectableDropdown
+  ...props
+  menuClassName=""
+  titleClassName=""
 />
 ```
